@@ -25,7 +25,7 @@ export default async function handler(req, res) {
     try {
         await resend.emails.send({
             from: "onboarding@resend.dev", // ✅ Keep this until you verify a domain
-            to: "contact@skrc.com", // ✅ Your actual email
+            to: "skrc.in@gmail.com", // ✅ Your actual email
             subject: `New Contact Form Submission from ${name}`,
             html: `
                 <h2>New Contact Message</h2>
