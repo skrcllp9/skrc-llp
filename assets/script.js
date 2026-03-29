@@ -77,7 +77,7 @@ form.addEventListener("submit", async(e) => {
     const data = {
         name: form.name.value,
         email: form.email.value,
-        phone: form.phone.value,
+        phone: form["contact-number"].value,
         message: form.message.value,
     };
 
@@ -90,9 +90,8 @@ form.addEventListener("submit", async(e) => {
     });
 
     if (res.ok) {
-        alert("Message sent!");
-        form.reset();
+        window.location.href = "/thankyou.html";
     } else {
-        alert("Error sending message");
+        alert("Something went wrong. Please try again.");
     }
 });
