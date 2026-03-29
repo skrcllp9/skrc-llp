@@ -68,3 +68,31 @@ $(document).ready(function() {
 document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("year").textContent = new Date().getFullYear();
 });
+
+const form = document.getElementById("contact-form");
+
+form.addEventListener("submit", async(e) => {
+    e.preventDefault();
+
+    const data = {
+        name: form.name.value,
+        email: form.email.value,
+        phone: form.phone.value,
+        message: form.message.value,
+    };
+
+    const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+    });
+
+    if (res.ok) {
+        alert("Message sent!");
+        form.reset();
+    } else {
+        alert("Error sending message");
+    }
+});

@@ -84,23 +84,23 @@
                     <div class="right">
                         <div class="form-outer-wrap slide-in-text">
                             <h3>Get in Touch</h3>
-                            <form action="">
+                            <form id="contact-form">
                                 <div class="form-wrapper">
                                     <div class="full-name">
                                         <label for="name">Name</label>
-                                        <input type="text" id="name" placeholder="Full Name">
+                                        <input required type="text" id="name" placeholder="Full Name">
                                     </div>
                                     <div class="phone-number">
-                                        <label for="contact-number">Contact Number</label>
+                                        <label for="contact-number">Contact Number (Optional)</label>
                                         <input type="tel" id="contact-number" placeholder="Contact Number">
                                     </div>
                                     <div class="email">
                                         <label for="email">Email</label>
-                                        <input type="email" id="email" placeholder="Email">
+                                        <input required type="email" id="email" placeholder="Email">
                                     </div>
                                     <div class="message">
                                         <label for="message">Message</label>
-                                        <textarea name="message" id="message">Enter you message</textarea>
+                                        <textarea required name="message" id="message">Enter you message</textarea>
                                     </div>
                                     <div class="submit">
                                         <input type="submit" value="submit" class="primary-btn">
