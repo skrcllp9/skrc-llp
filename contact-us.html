@@ -87,29 +87,31 @@
                             <h3>Get in Touch</h3>
                             <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
                                 <input type="hidden" name="access_key" value="9848c4bc-a09e-4945-a61d-958b27b916d4">
+                                <input type="hidden" name="subject" value="New Contact Message">
+                              
                                 <div class="form-wrapper">
-                                    <div class="full-name">
-                                        <label for="name">Name</label>
-                                        <input required type="text" id="name" placeholder="Full Name">
-                                    </div>
-                                    <div class="phone-number">
-                                        <label for="contact-number">Contact Number (Optional)</label>
-                                        <input type="te]" id="contact-number"  maxlength="10" 
-                                        pattern="[0-9]{10}" placeholder="Contact Number">
-                                    </div>
-                                    <div class="email">
-                                        <label for="email">Email</label>
-                                        <input required type="email" id="email" placeholder="Email">
-                                    </div>
-                                    <div class="message">
-                                        <label for="message">Message</label>
-                                        <textarea required name="message" id="message" placeholder="Enter your message"></textarea>
-                                    </div>
-                                    <div class="submit">
-                                        <input type="submit" value="submit" class="primary-btn">
-                                    </div>
+                                  <div class="full-name">
+                                    <label for="name">Name</label>
+                                    <input required type="text" name="name" id="name" placeholder="Full Name">
+                                  </div>
+                                  <div class="phone-number">
+                                    <label for="contact-number">Contact Number (Optional)</label>
+                                    <input type="tel" name="phone" id="contact-number" maxlength="10"
+                                      pattern="[0-9]{10}" placeholder="Contact Number">
+                                  </div>
+                                  <div class="email">
+                                    <label for="email">Email</label>
+                                    <input required type="email" name="email" id="email" placeholder="Email">
+                                  </div>
+                                  <div class="message">
+                                    <label for="message">Message</label>
+                                    <textarea required name="message" id="message" placeholder="Enter your message"></textarea>
+                                  </div>
+                                  <div class="submit">
+                                    <input type="submit" value="Submit" class="primary-btn">
+                                  </div>
                                 </div>
-                            </form>
+                              </form>
                         </div>
                     </div>
                 </div>

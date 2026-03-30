@@ -5,7 +5,6 @@ const lenis = new Lenis({
 window.lenis = lenis;
 // Listen for the scroll event and log the event data
 lenis.on('scroll', (e) => {
-    console.log(e);
 });
 const header = document.querySelector('.site-header');
 const hamburger = document.querySelector('.hamburger');
@@ -69,41 +68,40 @@ document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("year").textContent = new Date().getFullYear();
 });
 
-// const form = document.getElementById("contact-form");
 
-// form.addEventListener("submit", async(e) => {
-//     e.preventDefault();
 
-//     const data = {
-//         name: form.name.value,
-//         email: form.email.value,
-//         phone: form["contact-number"].value,
-//         message: form.message.value,
-//     };
-
-//     const res = await fetch("/api/contact", {
-//         method: "POST",
-//         headers: {
-//             "Content-Type": "application/json",
-//         },
-//         body: JSON.stringify(data),
-//     });
-
-//     if (res.ok) {
-//         window.location.href = "/thankyou.html";
-//     } else {
-//         alert("Something went wrong. Please try again.");
-//     }
-// });
-
-  const input = document.getElementById("contact-number");
-
-  input.addEventListener("input", function () {
-    // Remove anything that's not a digit
-    this.value = this.value.replace(/[^0-9]/g, "");
-
-    // Ensure max 10 digits (extra safety)
-    if (this.value.length > 10) {
-      this.value = this.value.slice(0, 10);
+document.addEventListener("DOMContentLoaded", function () {
+    const input = document.getElementById("contact-number");
+    
+    if (input) {  // extra safety check
+      input.addEventListener("input", function () {
+        this.value = this.value.replace(/[^0-9]/g, "");
+        if (this.value.length > 10) {
+          this.value = this.value.slice(0, 10);
+        }
+      });
     }
   });
+
+//   const resumeInput = document.getElementById('resume');
+//   const uploadBox = document.getElementById('upload-box');
+//   const uploadSuccess = document.getElementById('upload-success');
+//   const fileNameDisplay = document.getElementById('file-name-display');
+//   const removeBtn = document.getElementById('remove-file');
+
+//   // When a file is selected
+//   resumeInput.addEventListener('change', function () {
+//     if (this.files && this.files.length > 0) {
+//       fileNameDisplay.textContent = this.files[0].name;
+//       uploadBox.style.display = 'none';
+//       uploadSuccess.style.display = 'flex';
+//     }
+//   });
+
+//   // When remove is clicked
+//   removeBtn.addEventListener('click', function () {
+//     resumeInput.value = '';               // clear the file
+//     fileNameDisplay.textContent = '';
+//     uploadSuccess.style.display = 'none';
+//     uploadBox.style.display = 'flex';
+//   });
