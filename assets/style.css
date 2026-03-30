@@ -1327,6 +1327,7 @@ footer {
     width: 100%;
     font-family: var(--inter);
     color: var(--para-color);
+    outline: none;
 }
 
 .form-wrapper .submit {

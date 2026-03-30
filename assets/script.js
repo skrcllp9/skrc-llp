@@ -95,3 +95,15 @@ document.addEventListener("DOMContentLoaded", function() {
 //         alert("Something went wrong. Please try again.");
 //     }
 // });
+
+  const input = document.getElementById("contact-number");
+
+  input.addEventListener("input", function () {
+    // Remove anything that's not a digit
+    this.value = this.value.replace(/[^0-9]/g, "");
+
+    // Ensure max 10 digits (extra safety)
+    if (this.value.length > 10) {
+      this.value = this.value.slice(0, 10);
+    }
+  });
