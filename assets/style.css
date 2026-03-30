@@ -787,6 +787,7 @@ footer {
     padding: 32px 36px;
     transition: border-color 0.3s ease, background 0.3s ease;
     animation: slideIn 0.55s ease both;
+    border: 1px solid transparent
 }
 
 .fleet-row:first-child {
