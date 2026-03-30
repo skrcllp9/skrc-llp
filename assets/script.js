@@ -69,29 +69,29 @@ document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("year").textContent = new Date().getFullYear();
 });
 
-const form = document.getElementById("contact-form");
+// const form = document.getElementById("contact-form");
 
-form.addEventListener("submit", async(e) => {
-    e.preventDefault();
+// form.addEventListener("submit", async(e) => {
+//     e.preventDefault();
 
-    const data = {
-        name: form.name.value,
-        email: form.email.value,
-        phone: form["contact-number"].value,
-        message: form.message.value,
-    };
+//     const data = {
+//         name: form.name.value,
+//         email: form.email.value,
+//         phone: form["contact-number"].value,
+//         message: form.message.value,
+//     };
 
-    const res = await fetch("/api/contact", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json",
-        },
-        body: JSON.stringify(data),
-    });
+//     const res = await fetch("/api/contact", {
+//         method: "POST",
+//         headers: {
+//             "Content-Type": "application/json",
+//         },
+//         body: JSON.stringify(data),
+//     });
 
-    if (res.ok) {
-        window.location.href = "/thankyou.html";
-    } else {
-        alert("Something went wrong. Please try again.");
-    }
-});
+//     if (res.ok) {
+//         window.location.href = "/thankyou.html";
+//     } else {
+//         alert("Something went wrong. Please try again.");
+//     }
+// });
