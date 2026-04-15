@@ -1508,3 +1508,30 @@ form {
     max-width: 30ch;
     font-size: clamp(24px, 5vw, 42px);
   }
+  .privacy ul{
+padding-left: 20px;
+  }
+  .privacy h5{
+    font-size: 24px;
+    margin-bottom: 10px;
+    margin-top: 20px;
+  }
+  .privacy h6{
+    font-size: 20px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+  .privacy p{
+    font-size: 14px;
+  }
+  section.privacy{
+    padding-top: 120px;
+  }
+  .privacy li{
+    font-size: 14px;
+    padding-bottom:5px ;
+  }
+  .privacy ul{
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
