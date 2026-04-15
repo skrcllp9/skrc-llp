@@ -1498,3 +1498,13 @@ form {
   #remove-file:hover {
     background: #fdecea;
   }
+  .home-banner-text h1{
+    font-size: clamp(32px, 5vw, 72px);
+    color: var(--yellow);
+  }
+  .home-banner-text h2{
+    color:#fff;
+    font-family: var(--inter);
+    max-width: 30ch;
+    font-size: clamp(24px, 5vw, 42px);
+  }
